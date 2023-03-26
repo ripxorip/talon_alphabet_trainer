@@ -68,6 +68,6 @@ while True:
         if word_input == '!!':
             exit(0)
     if word_input == correct_word:
-        print('Correct!')
+        print(f'"{correct_word}" is correct!')
     else:
-        print('Fail!')
+        print(f'Fail! "{word_input}" is not equal to "{correct_word}"!')
