@@ -62,11 +62,13 @@ while True:
     p = vlc.MediaPlayer(f"file://{current_working_directory}/_output/output.mp3")
     p.play()
     
-    while (word_input != correct_word) and (len(word_input) <= len(correct_word)):
+    while (word_input != correct_word) and (len(word_input) < len(correct_word)):
         x = getch()
         word_input += x
         if word_input == '!!':
             exit(0)
+        elif word_input != '!' and correct_word[:len(word_input)] != word_input:
+            break
     if word_input == correct_word:
         print(f'"{correct_word}" is correct!')
     else:
