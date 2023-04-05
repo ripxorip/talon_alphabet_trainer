@@ -61,7 +61,7 @@ while True:
     tts.save('_output/output.mp3')
     p = vlc.MediaPlayer(f"file://{current_working_directory}/_output/output.mp3")
     p.play()
-    
+
     while (word_input != correct_word) and (len(word_input) < len(correct_word)):
         x = getch()
         word_input += x
